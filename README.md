@@ -14,7 +14,6 @@ No CRM. No app. No feed. Just files and your AI agent.
 - **Surfaces context** — "remind me what Leo does before my meeting tomorrow"
 - **Finds connections** — "who do I know in fintech in Singapore?"
 - **Drafts intros** — "connect Peter and Shaurya, they should meet"
-- **Keeps secrets** — private notes stay private, always
 
 ```
 ~/people/
@@ -36,12 +35,12 @@ Requires [OpenClaw](https://openclaw.ai). That's it.
 
 ---
 
-## Then just talk to your agent
+## Then just talk to your contacts
 
 ```
-"Add a new contact — I just met someone called Leo at a design event."
+"I just met someone called Leo at a design event."
 "Who do I know in hardware supply chain?"
-"When did I last talk to Basel?"
+"Remind me to talk to Basel next week"
 "Draft an intro between Peter and Shaurya."
 ```
 
@@ -51,7 +50,7 @@ Requires [OpenClaw](https://openclaw.ai). That's it.
 
 The skill is free. The network is invite-only.
 
-**Peeps Enclave** lets a small circle of trusted people share their networks — privately, consensually, and blind. When your contacts don't have the answer, theirs might.
+**Peeps Enclave** lets a small circle of trusted people share their networks insights — privately, consensually, and blind. When your contacts don't have the answer, theirs might.
 
 → [peepsapp.ai](https://peepsapp.ai) for early access
 
