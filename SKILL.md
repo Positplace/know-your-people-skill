@@ -54,9 +54,9 @@ If the user has joined a Peeps Enclave (peepsapp.ai), the enclave allows federat
 
 ## Core Behavior
 
-- User mentions a person → check if people contact exists, offer to create/update
+- User mentions a person → check if people contact exists, search the web if it is not, offer to create/update
 - User asks "who do I know in [domain/skill/location]?" → search by acumen, interests, location
-- User asks about someone → surface their file with relevant context
+- User asks about someone → surface insights from their file with relevant context
 - User wants to make an intro → draft it using both contact files + owner profile
 
 ## When User Mentions Someone
@@ -67,9 +67,9 @@ If the user has joined a Peeps Enclave (peepsapp.ai), the enclave allows federat
 
 ## Creating a New Contact — Search First, Then Ask
 
-Before asking follow-up questions, always search the web for the person (name + any context provided). Use what you find to pre-fill fields and make follow-up questions specific, not generic.
+Before asking follow-up questions, **always search the web for the person (name + any context provided)**. Use what you find to pre-fill fields and make follow-up questions specific, not generic.
 
-Example: "Found Peter on LinkedIn — design strategist, ex-Steelcase Asia Pacific in HK, now in SF. How do you know him, and is he open to intros?"
+Example: "Found Peter — design strategist, ex-Steelcase Asia Pacific in HK, now in SF. How do you know him, and is he open to intros?"
 
 ## Follow-Up Questions
 
@@ -91,7 +91,8 @@ Ask these as a short grouped follow-up (not one by one). Skip any that were alre
 
 - **Pronounce:** a pronunce
 - **LinkedIn:** link to LinkedIn
-- **How we met:** one sentence   
+- **Website:** personal or primary company website
+- **How I know them:** one sentence   
 - **Acumen:** skills and expertise, what person known for
 - **Relationship:** (Close / Warm / Colleague / Acquaintance / Estranged / Family)
 - **Intro willingness:** (Open / Closed / Unknown)
