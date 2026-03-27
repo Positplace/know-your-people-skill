@@ -92,8 +92,8 @@ Ask these as a short grouped follow-up (not one by one). Skip any that were alre
 # Full Name (nickname or any naming note in brackets)
 
 - **Pronouns:** guess, if unclear ask
-- **LinkedIn:** link to LinkedIn search for it
-- **Website:** personal or primary company website if you found any
+- **LinkedIn:** link to LinkedIn search for it, start with https://
+- **Website:** personal or company website if you found any, star with https://
 - **How I know them:** one sentence, ask about that
 - **Acumen:** skills and expertise, what person known for, based on your search + any user input
 - **Relationship:** (Close / Warm / Colleague / Acquaintance / Estranged / Family)
