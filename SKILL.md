@@ -170,23 +170,24 @@ All contact files live directly in `~/.openclaw/workspace/people/`. Move people 
 
 ## Search and Retrieval
 
-Use `grep` for fast fuzzy scanning across all contact files:
+Use `grep` for fast fuzzy scanning. Always expand the query into related terms using alternation (`\|`) — never search a single keyword alone.
 
 ```bash
-# Find anyone matching a name or keyword (case-insensitive)
-grep -ril "keyword" ~/.openclaw/workspace/people/
+# Find matching contacts (returns filenames)
+grep -ril "keyword\|synonym\|related" ~/.openclaw/workspace/people/
 
-# Show matching lines with context
-grep -i "keyword" ~/.openclaw/workspace/people/*.md
+# Find matching lines with context
+grep -iH "keyword\|synonym" ~/.openclaw/workspace/people/*.md
 
-# Find by company
-grep -ril "hsbc" ~/.openclaw/workspace/people/
-
-# Find open-to-intro contacts
+# Find contacts open to introductions
 grep -rl "Intro willingness.*Open" ~/.openclaw/workspace/people/
-
-# Full text search with filename
-grep -iH "keyword" ~/.openclaw/workspace/people/*.md
 ```
 
-For fuzzy/approximate matching, use `grep -i` (case-insensitive) as the first pass.
+**Keyword expansion examples — always broaden like this:**
+- "website" → `web\|design\|react\|webflow\|frontend\|ux\|figma`
+- "finance" → `finance\|fintech\|banking\|investment\|vc\|fund`
+- "startups" → `startup\|founder\|venture\|seed\|entrepreneur`
+- "marketing" → `marketing\|growth\|brand\|content\|seo\|ads`
+- "AI" → `ai\|machine.learning\|llm\|ml\|data.science\|nlp`
+
+When the user asks "who do I know in X", construct a multi-term grep from the domain. Prefer `-ril` for discovery, `-iH` when you need to see what's actually in the files.
