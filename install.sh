@@ -6,12 +6,12 @@ SKILL_RAW="https://raw.githubusercontent.com/Know-Your-People/peeps-skill/main"
 SKILLS_DIR="${HOME}/.openclaw/workspace/skills/peeps"
 PEEPS_DIR="${HOME}/.openclaw/workspace/peeps"
 
-# Colors
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-BOLD='\033[1m'
-NC='\033[0m'
+# Colors — use $'...' so \033 is a real ESC byte (single-quoted '\033' is literal backslash + digits)
+GREEN=$'\033[0;32m'
+YELLOW=$'\033[1;33m'
+RED=$'\033[0;31m'
+BOLD=$'\033[1m'
+NC=$'\033[0m'
 
 # Discord invite — blurple (#7289DA) → fuchsia (#EB459E) truecolor gradient on the URL
 DISCORD_URL='https://discord.gg/q3zVtnYnGY'
@@ -28,7 +28,7 @@ print_discord_line() {
     r=$((114 + (235 - 114) * p / 1000))
     g=$((137 + (69 - 137) * p / 1000))
     b=$((218 + (250 - 218) * p / 1000))
-    printf '\033[38;2;%d;%d;%dm%s' "$r" "$g" "$b" "$ch"
+    printf $'\033[38;2;%d;%d;%dm%s' "$r" "$g" "$b" "$ch"
   done
   printf '%s\n' "$NC"
 }
