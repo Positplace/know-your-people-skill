@@ -34,7 +34,14 @@ print_discord_line() {
 }
 
 echo ""
-echo "  Peeps — OpenClaw Skill Installer"
+echo -e "${GREEN}  ██████╗ ███████╗███████╗██████╗ ███████╗${NC}"
+echo -e "${GREEN}  ██╔══██╗██╔════╝██╔════╝██╔══██╗██╔════╝${NC}"
+echo -e "${GREEN}  ██████╔╝█████╗  █████╗  ██████╔╝███████╗${NC}"
+echo -e "${GREEN}  ██╔═══╝ ██╔══╝  ██╔══╝  ██╔═══╝ ╚════██║${NC}"
+echo -e "${GREEN}  ██║     ███████╗███████╗██║     ███████║${NC}"
+echo -e "${GREEN}  ╚═╝     ╚══════╝╚══════╝╚═╝     ╚══════╝${NC}"
+echo ""
+echo "  Building a good network is a skill. Do it with OpenClaw."
 echo "  ──────────────────────────────────────────"
 echo ""
 
