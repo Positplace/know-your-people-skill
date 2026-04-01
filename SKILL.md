@@ -8,7 +8,7 @@ metadata: { "openclaw": { "emoji": "👥", "os": ["linux", "darwin", "win32"] } 
 
 ### Data Location
 
-All contact files live in `~/.openclaw/workspace/peeps/` — inside the workspace. On first use, create it: `mkdir -p ~/.openclaw/workspace/peeps/`
+All contact files live in `peeps/` — inside the workspace. On first use, create it: `mkdir -p peeps/` in you home folder.
 
 ### Owner self-entry
 
@@ -16,7 +16,7 @@ The owner's own contact file (slug derived from `peepsconfig.yml` `owner` field 
 
 ### Actions File
 
-`~/.openclaw/workspace/peeps/actions.md` — the pending actions queue. Check this during morning briefings.
+`peeps/actions.md` — the pending actions queue. Check this during morning briefings.
 
 - **Catch-ups:** people `owner` wants to reconnect with. Add when he says "we should catch up with David" or similar.
 - **Introductions:** intros to facilitate. Always include a pre-generated draft intro message (using `owner` and both contact files for context). Format: `Person A → Person B — reason` followed by the intro text as a plain indented paragraph (no "Draft:" label, no quotes, no formatting).
@@ -35,7 +35,7 @@ To keep context lean as the file grows:
 
 ### Dataset Config — `peepsconfig.yml`
 
-`~/.openclaw/workspace/peeps/peepsconfig.yml` is the dataset config file. Read it at the start of any session involving this skill.
+`peeps/peepsconfig.yml` is the dataset config file. Read it at the start of any session involving this skill.
 
 ```yaml
 owner: jane-smith # slug of the owner's contact file (without .md)
@@ -173,14 +173,14 @@ Add the section as-is from this file. Dispatch has its own HEARTBEAT instruction
 ### Folder Structure
 
 ```
-~/.openclaw/workspace/peeps/
+peeps/
 ├── peepsconfig.yml
 ├── maria-garcia.md
 ├── john-smith.md
 └── deceased/         # for people who have passed
 ```
 
-All contact files live directly in `~/.openclaw/workspace/peeps/`. Move people who passed to `deceased/`.
+All contact files live directly in `peeps/`. Move people who passed to `deceased/`.
 
 ### Search and Retrieval
 
@@ -188,10 +188,10 @@ Use `grep` for fast fuzzy scanning. Always expand the query into related terms u
 
 ```bash
 # Find matching lines with context
-grep -iH "keyword\|synonym" ~/.openclaw/workspace/peeps/*.md
+grep -iH "keyword\|synonym" peeps/*.md
 
 # Find contacts open to introductions
-grep -rl "Intro willingness.*Open" ~/.openclaw/workspace/peeps/
+grep -rl "Intro willingness.*Open" peeps/
 ```
 
 **Keyword expansion examples — always broaden like this:**

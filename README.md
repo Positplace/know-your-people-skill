@@ -1,6 +1,6 @@
 # Peeps 👥
 
-> *Your network is bigger than you think. Most of it is just invisible when you need it.*
+> _Your network is bigger than you think. Most of it is just invisible when you need it._
 
 **Peeps** is an open-source skill for [OpenClaw](https://openclaw.ai) that turns the people you know into a private, searchable record — kept on your machine, owned by you.
 
@@ -46,13 +46,13 @@ Requires [OpenClaw](https://openclaw.ai). That's it.
 
 ---
 
-## The Enclave (early access)
+## The Dispatch
 
-The skill is free. The network is invite-only.
+Peeps is local by default. But we can tap into close private network intellignce with Dispatch.
 
-**Peeps Enclave** lets a small circle of trusted people share their networks insights — privately, consensually, and blind. When your contacts don't have the answer, theirs might.
+**Dispatch\* lets a small circle of trusted people share their networks insights — privately and consensually **without sharing any data\*\*. When your contacts don't have the answer, theirs might.
 
-→ [peepsapp.ai](https://peepsapp.ai) for early access
+→ [peepsapp.ai/dispatch](https://peepsapp.ai/dispatch) for early access
 
 ---
 
@@ -70,4 +70,4 @@ MIT. Take it, fork it, build on it.
 
 ---
 
-*Built by [Posit](https://posit.place) · Powered by [OpenClaw](https://openclaw.ai)*
+_Built by [Posit](https://posit.place) · Powered by [OpenClaw](https://openclaw.ai)_
