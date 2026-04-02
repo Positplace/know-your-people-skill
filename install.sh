@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Install policy (keep this in sync with user expectations):
+# - SKILL.md is always replaced from the repo on every run (updates ship here).
+# - Config and data under workspace/peeps/ are never overwritten once present.
 set -euo pipefail
 
 SKILL_REPO="git@github.com:Know-Your-People/peeps-skill.git"
@@ -67,11 +70,11 @@ echo -e "${GREEN}✓ OpenClaw found${NC}"
 # Create skills directory
 mkdir -p "$SKILLS_DIR"
 
-# Download skill files (update vs first install)
+# Always refresh SKILL.md from upstream (overwrite local copy).
 if [ -f "${SKILLS_DIR}/SKILL.md" ]; then
-  echo "  Updating skill..."
+  echo "  Replacing SKILL.md from the repository..."
 else
-  echo "  Downloading skill..."
+  echo "  Downloading SKILL.md..."
 fi
 
 FILES=("SKILL.md")
@@ -90,7 +93,7 @@ else
   echo -e "${GREEN}✓ ${PEEPS_DIR} already exists${NC}"
 fi
 
-# Create peepsconfig.yml if it doesn't exist
+# peepsconfig.yml — create on first run only; never overwrite (user may have edited it).
 CONFIG_FILE="${PEEPS_DIR}/peepsconfig.yml"
 if [ ! -f "$CONFIG_FILE" ]; then
   echo ""
@@ -103,7 +106,7 @@ if [ ! -f "$CONFIG_FILE" ]; then
   echo -e "${GREEN}✓ Created ${CONFIG_FILE} (owner: ${OWNER_SLUG})${NC}"
   echo -e "${YELLOW}  Remember to create your own contact file: ${PEEPS_DIR}/${OWNER_SLUG}.md${NC}"
 else
-  echo -e "${GREEN}✓ ${CONFIG_FILE} already exists${NC}"
+  echo -e "${GREEN}✓ Keeping existing ${CONFIG_FILE}${NC} ${YELLOW}(install never overwrites config)${NC}"
 fi
 
 echo ""
