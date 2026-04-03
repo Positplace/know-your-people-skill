@@ -1,6 +1,6 @@
 # Peeps 👥
 
-> _Your network is bigger than you think. Most of it is just invisible when you need it._
+> *Your network is bigger than you think. Most of it is just invisible when you need it.*
 
 **Peeps** is an open-source agent skill that turns the people you know into a private, searchable record — kept on your machine, owned by you.
 
@@ -31,13 +31,7 @@ peeps/
 npx skills add Know-Your-People/peeps-skill
 ```
 
-Works with Cursor, Claude Code, Codex, OpenCode, GitHub Copilot, and [40+ more agents](https://github.com/vercel-labs/skills#supported-agents).
-
-**OpenClaw users** get an enhanced setup (workspace config, contact directory):
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/Know-Your-People/peeps-skill/main/install.sh | bash
-```
+Works with OpenClaw, Hermes, Cursor, Claude Code, Codex, OpenCode, GitHub Copilot, and [40+ more agents](https://github.com/vercel-labs/skills#supported-agents).
 
 ---
 
@@ -52,13 +46,13 @@ curl -fsSL https://raw.githubusercontent.com/Know-Your-People/peeps-skill/main/i
 
 ---
 
-## The Dispatch
+## Haah
 
-Peeps is local by default. But we can tap into close private network intellignce with Dispatch.
+Peeps is local by default. But we can tap into close private network intellignce with Haah network dispatch.
 
-**Dispatch\* lets a small circle of trusted people share their networks insights — privately and consensually **without sharing any data\*\*. When your contacts don't have the answer, theirs might.
+**Haah lets a small circle of trusted people share their networks insights — privately and consensually** without sharing any data. When your contacts don't have the answer, theirs *might.*
 
-→ [peepsapp.ai/dispatch](https://peepsapp.ai/dispatch) for early access
+→ [peepsapp.ai/haah](https://peepsapp.ai/dispatch) for early access
 
 ---
 
@@ -76,4 +70,4 @@ MIT. Take it, fork it, build on it.
 
 ---
 
-_Built by [Posit](https://posit.place) · Powered by [OpenClaw](https://openclaw.ai)_
+*Built by [Posit](https://posit.place) · Powered by [OpenClaw*](https://openclaw.ai)

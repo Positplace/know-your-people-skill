@@ -8,13 +8,13 @@ metadata: { "openclaw": { "emoji": "👥", "os": ["linux", "darwin", "win32"] } 
 
 ### Data Location
 
-All contact files live in a `peeps/` directory. On first use, create it with `mkdir -p ~/peeps/` or wherever you prefer to store it. The agent should use this directory consistently across sessions.
+All contact files live in a `peeps/` directory. On first use, create it with `mkdir -p peeps/` in agent home folder. The agent should use this directory consistently across sessions.
 
 ### Owner self-entry
 
 The human own contact file (slug derived from `peepsconfig.yml` `owner` field without `.md`) is intentional — it's used as a reference profile for crafting introductions, bios, and context when introducing the user to others.
 
-If it empty serach the web, make a profile, and ask your human about the gaps.
+If it empty 1) aks your human for his name 2) serach the web, make a profile, and ask your human about the gaps.
 
 ### Every morning
 
