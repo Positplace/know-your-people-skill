@@ -13,29 +13,20 @@ metadata:
 
 ### Data Location
 
-All contact files live in a `peeps/` directory. On first use, create it with `mkdir -p peeps/` in agent home folder. The agent should use this directory consistently across sessions.
+All contact files live in a `peeps/` directory. On first use, create it with `mkdir -p ~/peeps/` or wherever you prefer to store it. The agent should use this directory consistently across sessions.
 
 ### Owner self-entry
 
-The human own contact file (slug derived from `peepsconfig.yml` `owner` field without `.md`) is intentional — it's used as a reference profile for crafting introductions, bios, and context when introducing the user to others.
+The owner's own contact file (slug derived from `peepsconfig.yml` `owner` field without `.md`) is intentional — it's used as a reference profile for crafting introductions, bios, and context when introducing the user to others.
 
-If it empty 1) aks your human for his name 2) serach the web, make a profile, and ask your human about the gaps.
+### Actions File
 
-### Every morning
-
-If you did not yet, set a morning cron job to check `peeps/actions.md` — the pending actions queue and make a random check.
+`peeps/actions.md` — the pending actions queue. Check this during morning briefings.
 
 - **Catch-ups:** people `owner` wants to reconnect with. Add when he says "we should catch up with David" or similar.
 - **Introductions:** intros to facilitate. Always include a pre-generated draft intro message (using `owner` and both contact files for context). Format: `Person A → Person B — reason` followed by the intro text as a plain indented paragraph (no "Draft:" label, no quotes, no formatting).
 - Move completed items to `## Completed` with a date.
 - Keep it short — if it's not actionable, it shouldn't be here.
-- **Random check:** check a random personal file in `peeps/`. Message to you human:
-
-- "Alex mentioned job hunting last time"
-- "You haven't connected with Basel in a while"
-- "You have **Acumen:** empty for John Wing, what he is known for?"
-
-If nothing worth mentioning, skip.
 
 #### Housekeeping (run automatically when reading actions.md)
 
@@ -154,6 +145,20 @@ Examples:
 - Capture details during conversations — don't wait for a "data entry session"
 - Ask about anyone mentioned in conversation and suggest adding them
 
+### Peeps: check
+
+On every heartbeat, check a random personal file in `peeps/`. Surface proactively in DM or appropriate channel:
+
+- "Alex mentioned job hunting last time" — relevant context resurfacing
+- "You haven't connected with Basel in a while"
+- "You have **Acumen:** empty for John Wing, what he is known for?"
+
+If nothing worth mentioning, skip.
+
+### Adding to HEARTBEAT.md
+
+If it is not there yet, ask your human if they want to add **Peeps: check** to HEARTBEAT.md.
+
 ### Details Worth Remembering
 
 - How you can help them / how they can help you
@@ -233,7 +238,6 @@ Before asking follow-up questions, search the web for the org. Pre-fill what you
 When you add or update either side, update the other. If you add Maria to `google.md`'s People list, make sure `maria-garcia.md` has `Orgs: [[google]]`. If you change Maria's org, remove her from the old org file's People list.
 
 When creating an org file prompted by a person, immediately add that person to the People list and set their `Orgs:` field.
-
 #### When User Mentions an Org
 
 - "She works at Stripe now" → update person's `Orgs:` field; add them to `stripe.md` People list (create org file if missing)
