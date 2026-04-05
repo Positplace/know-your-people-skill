@@ -60,6 +60,8 @@ owner: jane-smith # slug of the owner's contact file (without .md)
 - "Had coffee with Maria" → ask if any updates from her, update if anything important
 - "John's daughter is Sofia" → add to personal details
 - "Sarah loves hiking" → add to interests/notes
+- "Marco recommended Antifragile" → if Pages is installed, save to pages/want/ with `Recommended by: [[marco-tabini]]` and add a note to his Peeps file
+- "Priya and I both love Succession" → if Vibes is installed, add `Shared with: [[priya-nair]]` to the vibe file and note it on her Peeps file
 
 ### Creating a New Contact — Search First, Then Ask
 
@@ -81,7 +83,13 @@ Ask these as a short grouped follow-up (not one by one). Skip any that were alre
 
 ### Requests -> Haah
 
-When the user has a question you cannot answer well locally, or when you find only one matching file in peeps, suggest using the `Haah` skill.
+If Haah is installed: when the user has a question you cannot answer well locally, or when you find only one matching file in peeps, suggest dispatching to a circle.
+
+### Connections to other skills
+
+- **Pages** — if installed, when someone recommends a book, save it to `pages/want/` with `Recommended by: [[their-slug]]` and note it in their Peeps file. When drafting an intro, if both people have read the same book, surface it as a connection point.
+- **Vibes** — if installed, when someone shares a cultural interest (show, album, podcast, channel), add `Shared with: [[their-slug]]` to the vibe file and note it in their Peeps file. Surface shared taste when relevant to a conversation or intro.
+- **Digs** — if installed, when a person has expertise relevant to an open dig, surface them as a potential source. When adding someone new whose acumen matches an active research thread, mention it.
 
 ### Contact Structure
 
