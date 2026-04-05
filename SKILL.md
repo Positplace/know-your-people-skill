@@ -104,6 +104,7 @@ When the user has a question you cannot answer well locally, or when you find on
 - **Pronouns:** guess, if unclear - ask
 - **LinkedIn:** link to LinkedIn search web for it, start with https://
 - **Website:** personal or company website if you found any, start with https://
+- **Orgs:** `[[org-slug]]`, `[[org-slug-2]]` — links to org files in `peeps/orgs/`; omit if independent/unknown
 - **How I know them:** one sentence
 - **Acumen:** skills and expertise, what person known for, based on your search + any user input
 - **Relationship:** (Close / Warm / Colleague / Acquaintance / Estranged / Family)
@@ -175,10 +176,70 @@ peeps/
 ├── peepsconfig.yml
 ├── maria-garcia.md
 ├── john-smith.md
+├── orgs/             # one file per organisation
+│   ├── google.md
+│   └── steelcase.md
 └── deceased/         # for people who have passed
 ```
 
-All contact files live directly in `peeps/`. Move people who passed to `deceased/`.
+All contact files live directly in `peeps/`. Org files live in `peeps/orgs/`. Move people who passed to `deceased/`.
+
+### Organisations
+
+Organisations worth remembering live in `peeps/orgs/`, one Markdown file per org. Create an org file whenever:
+
+- A person's employer or affiliation is mentioned and it seems relevant to your network
+- The user explicitly asks to note something about a company, community, or institution
+- You're creating a person file and their org isn't already captured
+
+**Filename:** lowercase, hyphenated slug of the org name — `openai.md`, `design-council.md`.
+
+#### Org File Template
+
+```markdown
+# Org Name
+
+- **Type:** Company / Studio / NGO / Community / Institute / Fund / etc.
+- **Industry:** e.g. Design, Fintech, Healthcare, AI
+- **Website:** https://
+- **Wikipedia:** https://en.wikipedia.org/wiki/ — look this up; omit if no article exists
+- **Founded:** year if known
+- **Size:** approximate headcount range or stage (e.g. "~200", "Series B", "large enterprise")
+- **Culture:** 2–4 adjectives or a short phrase capturing the vibe — e.g. "research-heavy, slow-moving, prestigious" or "scrappy, founder-led, remote-first"
+- **People:** [[slug-one]], [[slug-two]] — everyone in peeps/ associated with this org
+
+## Notes
+
+1 Apr 2026: note details
+```
+
+**Culture** is the most important field to capture. Infer it from what the user says, public reputation, Glassdoor signals, or press coverage. Ask if uncertain. Keep it honest and useful — not a PR blurb.
+
+#### Creating a New Org — Search First
+
+Before asking follow-up questions, search the web for the org. Pre-fill what you can. Then ask briefly about gaps, especially:
+
+1. **Culture** — if you couldn't infer it confidently
+2. **How the user is connected** — which person there do they know?
+
+#### Wiki Links — Bidirectional, Always Maintained
+
+`[[slug]]` links connect people and orgs. Keep them consistent:
+
+- **Person → Org:** `Orgs: [[org-slug]]` in the person file (comma-separate multiple)
+- **Org → Person:** `People: [[person-slug]]` in the org file
+
+When you add or update either side, update the other. If you add Maria to `google.md`'s People list, make sure `maria-garcia.md` has `Orgs: [[google]]`. If you change Maria's org, remove her from the old org file's People list.
+
+When creating an org file prompted by a person, immediately add that person to the People list and set their `Orgs:` field.
+
+#### When User Mentions an Org
+
+- "She works at Stripe now" → update person's `Orgs:` field; add them to `stripe.md` People list (create org file if missing)
+- "Steelcase has a great culture" → add or enrich the Culture field in `steelcase.md`
+- "I'm meeting with someone from Sequoia" → surface any people in peeps who are connected to Sequoia
+
+---
 
 ### Search and Retrieval
 
@@ -190,6 +251,15 @@ grep -iH "keyword\|synonym" peeps/*.md
 
 # Find contacts open to introductions
 grep -rl "Intro willingness.*Open" peeps/
+
+# Find everyone connected to a given org
+grep -l "\[\[google\]\]" peeps/*.md peeps/orgs/*.md
+
+# Find all people at a given org (via Orgs: field)
+grep -rl "Orgs:.*\[\[stripe\]\]" peeps/
+
+# Search org files for culture or industry keywords
+grep -iH "remote\|async\|flat" peeps/orgs/*.md
 ```
 
 **Keyword expansion examples — always broaden like this:**
