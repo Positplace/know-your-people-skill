@@ -167,6 +167,16 @@ If it is not there yet, ask your human if they want to add **Peeps: check** to H
 - Kids/spouse names and ages
 - Sensitive topics to avoid
 
+## Updating
+
+To update this skill to the latest version, fetch the new SKILL.md from GitHub and replace this file:
+
+```
+https://raw.githubusercontent.com/Know-Your-People/peeps-skill/main/SKILL.md
+```
+
+---
+
 ### What NOT To Suggest
 
 - Syncing with phone contacts — different purpose, keep separate
