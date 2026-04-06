@@ -66,7 +66,7 @@ Peeps is part of a suite of personal intelligence skills:
 - [**Nooks** 📍](https://github.com/Know-Your-People/nooks-skill) — your saved places. When you're meeting someone, Nooks suggests the right spot based on your curated list of cafes, coworking spaces, and restaurants.
 - [**Pages** 📖](https://github.com/Know-Your-People/pages-skill) — your reading life. When someone recommends a book, Peeps links it to their file. When both of you have read the same book, your agent surfaces it as a connection point.
 - [**Vibes** 🎧](https://github.com/Know-Your-People/vibes-skill) — your cultural context. When you share a show, album, or podcast with someone, Peeps notes the shared taste and can surface it when drafting an intro or reconnecting.
-- [**Digs** 🔭](https://github.com/Know-Your-People/dig-skill) — your active research threads. When someone in your network has expertise matching an open dig, Peeps flags them as a potential source.
+- [**Digs** 🔭](https://github.com/Know-Your-People/digs-skill) — your active research threads. When someone in your network has expertise matching an open dig, Peeps flags them as a potential source.
 
 Install all six and your agent knows your people, your places, your reads, your culture, and your open questions.
 
