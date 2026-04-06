@@ -25,8 +25,8 @@ The owner's own contact file (slug derived from `peepsconfig.yml` `owner` field 
 
 `kyp/peeps/actions.md` — the pending actions queue. Check this during morning briefings.
 
-- **Catch-ups:** people `owner` wants to reconnect with. Add when he says "we should catch up with David" or similar.
-- **Introductions:** intros to facilitate. Always include a pre-generated draft intro message (using `owner` and both contact files for context). Format: `Person A → Person B — reason` followed by the intro text as a plain indented paragraph (no "Draft:" label, no quotes, no formatting).
+Catch-ups: people `owner` wants to reconnect with. Add when he says "we should catch up with David" or similar.
+Introductions: intros to facilitate. Always include a pre-generated draft intro message (using `owner` and both contact files for context). Format: `Person A → Person B — reason` followed by the intro text as a plain indented paragraph (no "Draft:" label, no quotes, no formatting).
 - Move completed items to `## Completed` with a date.
 - Keep it short — if it's not actionable, it shouldn't be here.
 
@@ -34,10 +34,10 @@ The owner's own contact file (slug derived from `peepsconfig.yml` `owner` field 
 
 To keep context lean as the file grows:
 
-- **Completed items:** delete after 3 days
-- **Completed section:** rolling 7-day window — anything older than 7 days is removed
-- **Stale catch-ups:** if a pending catch-up has been sitting for 10+ days with no update, move it to Completed as "(not pursued)" with today's date
-- **Pending intros:** keep until explicitly marked done or cancelled — intro intent doesn't expire
+Completed items: delete after 3 days
+Completed section: rolling 7-day window — anything older than 7 days is removed
+Stale catch-ups: if a pending catch-up has been sitting for 10+ days with no update, move it to Completed as "(not pursued)" with today's date
+Pending intros: keep until explicitly marked done or cancelled — intro intent doesn't expire
 - Apply this cleanup silently on every read. No need to announce.
 
 ### Dataset Config — `peepsconfig.yml`
@@ -105,18 +105,18 @@ If Haah is installed: when the user has a question you cannot answer well locall
 ```markdown
 # Full Name (nickname or any naming note in brackets)
 
-- **Pronouns:** guess, if unclear - ask
-- **Location:** from your search, otherwise ask
-- **LinkedIn:** link to LinkedIn search web for it, start with https://
-- **Image:** link to `../assets/photo-slug-usually-same-as-person-name`
-- **Website:** personal or company website if you found any, start with https://
-- **Orgs:** `[[org-slug]]`, `[[org-slug-2]]` — links to org files in `kyp/peeps/orgs/`; omit if independent/unknown
-- **How I know them:** one sentence
-- **Acumen:** skills and expertise, what person known for, based on your search + any user input
-- **Relationship:** (Close / Warm / Colleague / Acquaintance / Estranged / Family)
-- **Intro willingness:** (Open / Closed / Cautious / Unknown)
-- **Interests:** — hobbies, sports, lifestyle, anything you found 
-- **Bio:** — one concise narrative paragraph based on your search and user input about them
+Pronouns: guess, if unclear - ask
+Location: from your search, otherwise ask
+LinkedIn: link to LinkedIn search web for it, start with https://
+Image: link to `../assets/photo-slug-usually-same-as-person-name`
+Website: personal or company website if you found any, start with https://
+Orgs: `[[org-slug]]`, `[[org-slug-2]]` — links to org files in `kyp/peeps/orgs/`; omit if independent/unknown
+How I know them: one sentence
+Acumen: skills and expertise, what person known for, based on your search + any user input
+Relationship: (Close / Warm / Colleague / Acquaintance / Estranged / Family)
+Intro willingness: (Open / Closed / Cautious / Unknown)
+Interests: — hobbies, sports, lifestyle, anything you found 
+Bio: — one concise narrative paragraph based on your search and user input about them
 
 ## Notes
 
@@ -230,15 +230,15 @@ Organisations worth remembering live in `kyp/peeps/orgs/`, one Markdown file per
 ```markdown
 # Org Name
 
-- **Type:** Company / Studio / NGO / Community / Institute / Fund / Startup / etc.
-- **Industry:** e.g. Design, Fintech, Healthcare, AI
-- **Solving for:** what problem this organisation is solving (like acumen for peeps, but for orgs)
-- **Website:** https://
-- **Wikipedia:** https://en.wikipedia.org/wiki/ — look this up; omit if no article exists
-- **Founded:** year if known
-- **Size:** approximate headcount range or stage (e.g. "~200", "Series B", "large enterprise")
-- **Culture:** 2–4 adjectives or a short phrase capturing the vibe — e.g. "research-heavy, slow-moving, prestigious" or "scrappy, founder-led, remote-first"
-- **People:** [[slug-one]], [[slug-two]] — everyone in `kyp/peeps/` associated with this org
+Type: Company / Studio / NGO / Community / Institute / Fund / Startup / etc.
+Industry: e.g. Design, Fintech, Healthcare, AI
+Solving for: what problem this organisation is solving (like acumen for peeps, but for orgs)
+Website: https://
+Wikipedia: https://en.wikipedia.org/wiki/ — look this up; omit if no article exists
+Founded: year if known
+Size: approximate headcount range or stage (e.g. "~200", "Series B", "large enterprise")
+Culture: 2–4 adjectives or a short phrase capturing the vibe — e.g. "research-heavy, slow-moving, prestigious" or "scrappy, founder-led, remote-first"
+People: [[slug-one]], [[slug-two]] — everyone in `kyp/peeps/` associated with this org
 
 ## Notes
 
@@ -258,8 +258,8 @@ Before asking follow-up questions, search the web for the org. Pre-fill what you
 
 `[[slug]]` links connect people and orgs. Keep them consistent:
 
-- **Person → Org:** `Orgs: [[org-slug]]` in the person file (comma-separate multiple)
-- **Org → Person:** `People: [[person-slug]]` in the org file
+Person → Org: `Orgs: [[org-slug]]` in the person file (comma-separate multiple)
+Org → Person: `People: [[person-slug]]` in the org file
 
 When you add or update either side, update the other. If you add Maria to `google.md`'s People list, make sure `maria-garcia.md` has `Orgs: [[google]]`. If you change Maria's org, remove her from the old org file's People list.
 
