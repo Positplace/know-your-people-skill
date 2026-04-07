@@ -31,11 +31,20 @@ peeps/
 
 ## Install
 
+### Claude Code
+
+```bash
+mkdir -p ~/.claude/skills/peeps
+curl -o ~/.claude/skills/peeps/SKILL.md https://raw.githubusercontent.com/Know-Your-People/peeps-skill/main/SKILL.md
+```
+
+### Other agents
+
 ```bash
 npx skills add Know-Your-People/peeps-skill
 ```
 
-Works with OpenClaw, Cursor, Claude Code, Codex, OpenCode, GitHub Copilot, and [40+ more agents](https://github.com/vercel-labs/skills#supported-agents).
+Works with OpenClaw, Cursor, Codex, OpenCode, GitHub Copilot, and [40+ more agents](https://github.com/vercel-labs/skills#supported-agents).
 
 ### Hermes
 
