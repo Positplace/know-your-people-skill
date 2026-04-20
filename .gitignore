@@ -8,7 +8,7 @@ _meta.json
 # and should never be mixed with skill code
 data/
 /peeps/
-kyp/
+mind/
 contacts/
 people/
 *.db

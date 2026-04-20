@@ -13,9 +13,9 @@ metadata:
 
 ### Data Location
 
-**Base path** is workspace root or document root folder. On first use, create it: `mkdir -p kyp/peeps/`. Peeps uses a `kyp/peeps/` folder in your workspace.
+**Base path** is workspace root or document root folder. On first use, create it: `mkdir -p mind/peeps/`. Peeps uses a `mind/peeps/` folder in your workspace.
 
-All contact files live in a `kyp/peeps/` directory. On first use, create it with `mkdir -p kyp/peeps/` or wherever you prefer to store it. The agent should use this directory consistently across sessions.
+All contact files live in a `mind/peeps/` directory. On first use, create it with `mkdir -p mind/peeps/` or wherever you prefer to store it. The agent should use this directory consistently across sessions.
 
 ### Owner self-entry
 
@@ -23,7 +23,7 @@ The owner's own contact file (slug derived from `peepsconfig.yml` `owner` field 
 
 ### Actions File
 
-`kyp/peeps/actions.md` — the pending actions queue. Check this during morning briefings.
+`mind/peeps/actions.md` — the pending actions queue. Check this during morning briefings.
 
 Catch-ups: people `owner` wants to reconnect with. Add when he says "we should catch up with David" or similar.
 Introductions: intros to facilitate. Always include a pre-generated draft intro message (using `owner` and both contact files for context). Format: `Person A → Person B — reason` followed by the intro text as a plain indented paragraph (no "Draft:" label, no quotes, no formatting).
@@ -42,7 +42,7 @@ Pending intros: keep until explicitly marked done or cancelled — intro intent 
 
 ### Dataset Config — `peepsconfig.yml`
 
-`peepsconfig.yml` lives inside the `kyp/peeps/` directory. Read it at the start of any session involving this skill.
+`peepsconfig.yml` lives inside the `mind/peeps/` directory. Read it at the start of any session involving this skill.
 
 ```yaml
 owner: jane-smith # slug of the owner's contact file (without .md)
@@ -65,7 +65,7 @@ images: no (by default no, ask if you human want to feach images for pepople, wa
 - "Had coffee with Maria" → ask if any updates from her, update if anything important
 - "John's daughter is Sofia" → add to personal details
 - "Sarah loves hiking" → add to interests/notes
-- "Marco recommended Antifragile" → if Pages is installed, save to `kyp/pages/want/` with `Recommended by: [[marco-tabini]]` and add a note to his Peeps file
+- "Marco recommended Antifragile" → if Pages is installed, save to `mind/pages/want/` with `Recommended by: [[marco-tabini]]` and add a note to his Peeps file
 - "Priya and I both love Succession" → if Vibes is installed, add `Shared with: [[priya-nair]]` to the vibe file and note it on her Peeps file
 
 ### Creating a New Contact — Search First, Then Ask
@@ -83,17 +83,17 @@ After searching the web and pre-filling what you can, ask about the gaps:
 3. **How you know them** — if not already provided
 4. **Interests** — hobbies, sports, lifestyle?
 
-If in `kyp/pages/peepsconfig.yml` images set to yes find a headhsot of a person and ad it to `../assets/` use person name for a slug, write it down in **Image:** feild.
+If in `mind/pages/peepsconfig.yml` images set to yes find a headhsot of a person and ad it to `../assets/` use person name for a slug, write it down in **Image:** feild.
 
 Ask these as a short grouped follow-up (not one by one). Skip any that were already answered in the original message.
 
 ### Requests -> Haah
 
-If Haah is installed: when the user has a question you cannot answer well locally, or when you find only one matching file in `kyp/peeps/`, suggest dispatching to a circle.
+If Haah is installed: when the user has a question you cannot answer well locally, or when you find only one matching file in `mind/peeps/`, suggest dispatching to a circle.
 
 ### Connections to other skills
 
-Pages: if installed, when someone recommends a book, save it to `kyp/pages/want/` with `Recommended by: [[their-slug]]` and note it in their Peeps file. When drafting an intro, if both people have read the same book, surface it as a connection point.
+Pages: if installed, when someone recommends a book, save it to `mind/pages/want/` with `Recommended by: [[their-slug]]` and note it in their Peeps file. When drafting an intro, if both people have read the same book, surface it as a connection point.
 Vibes: if installed, when someone shares a cultural interest (show, album, podcast, channel), add `Shared with: [[their-slug]]` to the vibe file and note it in their Peeps file. Surface shared taste when relevant to a conversation or intro.
 Digs: if installed, when a person has expertise relevant to an open dig, surface them as a potential source. When adding someone new whose acumen matches an active research thread, mention it.
 
@@ -110,7 +110,7 @@ Location: from your search, otherwise ask
 LinkedIn: link to LinkedIn search web for it, start with https://
 Image: link to `../assets/photo-slug-usually-same-as-person-name`
 Website: personal or company website if you found any, start with https://
-Orgs: `[[org-slug]]`, `[[org-slug-2]]` — links to org files in `kyp/peeps/orgs/`; omit if independent/unknown
+Orgs: `[[org-slug]]`, `[[org-slug-2]]` — links to org files in `mind/peeps/orgs/`; omit if independent/unknown
 How I know them: one sentence
 Acumen: skills and expertise, what person known for, based on your search + any user input
 Relationship: (Close / Warm / Colleague / Acquaintance / Estranged / Family)
@@ -162,7 +162,7 @@ Examples:
 
 ### Peeps: check
 
-On every heartbeat, check a random personal file in `kyp/peeps/`. Surface proactively in DM or appropriate channel:
+On every heartbeat, check a random personal file in `mind/peeps/`. Surface proactively in DM or appropriate channel:
 
 - "Alex mentioned job hunting last time" — relevant context resurfacing
 - "You haven't connected with Basel in a while"
@@ -202,7 +202,7 @@ https://raw.githubusercontent.com/haah-ing/peeps-skill/main/SKILL.md
 ### Folder Structure
 
 ```
-kyp/
+mind/
 └── peeps/
     ├── peepsconfig.yml
     ├── maria-garcia.md
@@ -213,11 +213,11 @@ kyp/
     └── deceased/         # for people who have passed
 ```
 
-All contact files live directly in `kyp/peeps/`. Org files live in `kyp/peeps/orgs/`. Move people who passed to `deceased/`.
+All contact files live directly in `mind/peeps/`. Org files live in `mind/peeps/orgs/`. Move people who passed to `deceased/`.
 
 ### Organisations
 
-Organisations worth remembering live in `kyp/peeps/orgs/`, one Markdown file per org. Create an org file whenever:
+Organisations worth remembering live in `mind/peeps/orgs/`, one Markdown file per org. Create an org file whenever:
 
 - A person's employer or affiliation is mentioned and it seems relevant to your network
 - The user explicitly asks to note something about a company, community, or institution
@@ -238,7 +238,7 @@ Wikipedia: https://en.wikipedia.org/wiki/ — look this up; omit if no article e
 Founded: year if known
 Size: approximate headcount range or stage (e.g. "~200", "Series B", "large enterprise")
 Culture: 2–4 adjectives or a short phrase capturing the vibe — e.g. "research-heavy, slow-moving, prestigious" or "scrappy, founder-led, remote-first"
-People: [[slug-one]], [[slug-two]] — everyone in `kyp/peeps/` associated with this org
+People: [[slug-one]], [[slug-two]] — everyone in `mind/peeps/` associated with this org
 
 ## Notes
 
@@ -269,7 +269,7 @@ When creating an org file prompted by a person, immediately add that person to t
 
 - "She works at Stripe now" → update person's `Orgs:` field; add them to `stripe.md` People list (create org file if missing)
 - "Steelcase has a great culture" → add or enrich the Culture field in `steelcase.md`
-- "I'm meeting with someone from Sequoia" → surface any people in `kyp/peeps/` who are connected to Sequoia
+- "I'm meeting with someone from Sequoia" → surface any people in `mind/peeps/` who are connected to Sequoia
 
 ---
 
@@ -281,11 +281,11 @@ Use `grep` for fast fuzzy scanning. Always expand the query into related terms u
 
 ```bash
 # Example: single script combining all relevant lookups
-grep -iH "keyword\|synonym" kyp/peeps/*.md
-grep -rl "#hiking" kyp/peeps/
-grep -l "\[\[google\]\]" kyp/peeps/*.md kyp/peeps/orgs/*.md
-grep -rl "Orgs:.*\[\[stripe\]\]" kyp/peeps/
-grep -iH "remote\|async\|flat" kyp/peeps/orgs/*.md
+grep -iH "keyword\|synonym" mind/peeps/*.md
+grep -rl "#hiking" mind/peeps/
+grep -l "\[\[google\]\]" mind/peeps/*.md mind/peeps/orgs/*.md
+grep -rl "Orgs:.*\[\[stripe\]\]" mind/peeps/
+grep -iH "remote\|async\|flat" mind/peeps/orgs/*.md
 ```
 
 **Keyword expansion examples — always broaden like this:**
